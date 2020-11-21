@@ -368,7 +368,7 @@ class Server:
                     # os.remove("sample_space.file")
                     return redirect(url_for("Main"))
 
-        self.App.run(debug=True)
+        self.App.run(debug=False)
 
 
 
