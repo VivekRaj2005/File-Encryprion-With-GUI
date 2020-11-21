@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>MENU</title>
+    <style>
+        .Login-Div{
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%);
+             width: 500px;
+             padding: 10px 10px 10px 10px;
+             background-color: #000064;
+        }
+        .Login-Div .Icon{
+             height: 50px;
+             width: 100px;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .Login-Div .Head{
+            font-size: 25px;
+            font-style: normal;
+            color: wheat;
+            font-family: "fangsong";
+        }
+        .Login{
+            border: 0.05px solid white;
+            margin: 10px !important;
+            padding: 30px;
+            display: block;
+            height: 400px;
+        }
+        .ask{
+            margin: 10px 20px 20px 10px;
+            margin: 35px !important;
+        }
+        .buttonFeel-Blue
+    {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 80px;
+      width: 20%;
+      margin-top: 10px;
+      border: 2px solid #fff;
+    }
+
+    .hoverover-Blue:hover
+    {
+      color: #00f;
+      background-color: #fff;
+    }
+        input{
+            padding: 5px 20px;
+            margin: 0px 0px 0px 55px;
+            font-family: "fangsong";
+            border: None;
+            font-size: 16px;
+        }
+        button {
+            padding: 5px 20px;
+            margin: 0px 0px 0px 0px;
+            font-family: "times" !important;
+            border: None;
+            font-size: 16px;
+        }
+        input[type=submit], input[type=reset]{
+            margin: 0px 0px 0px 0px !important;
+            font-family: "times" !important;
+        }
+        label{
+            color: white;
+            font-family: "fangsong";
+        }
+        .alert{
+            margin: auto;
+            width: 400px;
+            padding: 10px 1px 10px 10px;
+            background-color: #640000;
+            color: #ffffff;
+        }
+        .company{
+            margin-top: 10px;
+            margin-left: 115px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="Login-Div">
+        <h5 class="Head" align="Center"> CHOOSE YOUR ACTION </h5>
+            <div class="ask">
+               <a  style="padding: 10px 153px !important;" href="{{ encodeLink }}" class="buttonFeel-Blue hoverover-Blue">ENCODE A FILE</a>
+               <br>
+           </div>
+           <div class="ask">
+               <a style="padding: 10px 153px !important;"href="{{ decodeLink }}" class="buttonFeel-Blue hoverover-Blue">DECODE A FILE</a>
+               <br>
+           </div>
+            <div class="ask"><a href="{{ GNHML }}" style="padding: 10px 100px !important;" class="buttonFeel-Blue hoverover-Blue">GENERATE A NEW HASH MAP</a>
+               <br></div>
+              <div class="ask"> <a href="{{ resetLink }}" style="padding: 10px 188px !important;" class="buttonFeel-Blue hoverover-Blue">RESET</a>
+               <br></div> 
+              <div class="ask"><a href="{{ exitLink }}" style="padding: 10px 195px !important;"class="buttonFeel-Blue hoverover-Blue">EXIT</a>
+               <br></div>
+               
+        
+    </div>
+</body>
+</html>
