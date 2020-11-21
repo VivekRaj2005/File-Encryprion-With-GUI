@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .Login-Div{
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%);
+             width: 510px;
+             padding: 10px 10px 10px 10px;
+             background-color: #000064;
+        }
+        .Login-Div .Icon{
+             height: 50px;
+             width: 100px;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .Login-Div .Head{
+            font-size: 25px;
+            font-style: normal;
+            color: wheat;
+            font-family: "fangsong";
+        }
+        .Login{
+            border: 0.05px solid white;
+            margin: 10px !important;
+            padding: 30px;
+        }
+        .ask{
+            margin: 10px 20px 20px 10px;
+        }
+        input{
+            padding: 5px 20px;
+            margin: 0px 0px 0px 55px;
+            font-family: "fangsong";
+            border: None;
+            font-size: 16px;
+        }
+        button {
+            padding: 5px 20px;
+            margin: 0px 0px 0px 0px;
+            font-family: "times" !important;
+            border: None;
+            font-size: 16px;
+        }
+        input[type=submit], input[type=reset]{
+            margin: 0px 0px 0px 0px !important;
+            font-family: "times" !important;
+        }
+        label{
+            color: white;
+            font-family: "fangsong";
+        }
+        .alert{
+            margin: auto;
+            width: 400px;
+            padding: 10px 1px 10px 10px;
+            background-color: #640000;
+            color: #ffffff;
+        }
+        .company{
+            margin-top: 10px;
+            margin-left: 115px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    {% if alert %}
+        <div class="alert" align="center">
+            <h4 align="center">{{  alertMsg  }}</h4>
+        </div>
+    {% endif %}
+    <div class="Login-Div">
+        <h5 class="Head" align="Center"> Generate New Hash Map </h5>
+        <form id = "form" class="Login" action="#" method="post" >
+        <p style="color: #fff; font-size: 15px;" align="Center">AUTHENTICATION REQUIRED</p>   
+            <div class="ask" align="center">
+                <label for="Pass">Password:</label>
+                <input id="Pass" name="Pass" type="password">
+            </div>
+            <div class="ask" align="center">
+                <button onclick="document.getElementById('Login').submit()">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

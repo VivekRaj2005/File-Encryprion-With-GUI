@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .Login-Div{
+             position: absolute;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -50%);
+             width: 550px;
+             padding: 10px 10px 10px 10px;
+             background-color: #000064;
+        }
+        .Login-Div .Icon{
+             height: 50px;
+             width: 100px;
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .Login-Div .Head{
+            font-size: 25px;
+            font-style: normal;
+            color: wheat;
+            font-family: "fangsong";
+        }
+        .Login{
+            border: 0.05px solid white;
+            margin: 10px !important;
+            padding: 30px;
+        }
+        .ask{
+            margin: 10px 20px 20px 10px;
+        }
+        input{
+            padding: 5px 20px;
+            margin: 0px 0px 0px 55px;
+            font-family: "fangsong";
+            border: None;
+            font-size: 16px;
+        }
+        button {
+            padding: 5px 20px;
+            margin: 0px 0px 0px 0px;
+            font-family: "times" !important;
+            border: None;
+            font-size: 16px;
+        }
+        input[type=submit], input[type=reset]{
+            margin: 0px 0px 0px 0px !important;
+            font-family: "times" !important;
+        }
+        label{
+            color: white;
+            font-family: "fangsong";
+        }
+        .alert{
+            margin: auto;
+            width: 400px;
+            padding: 10px 1px 10px 10px;
+            background-color: #640000;
+            color: #ffffff;
+        }
+        .company{
+            margin-top: 10px;
+            margin-left: 115px;
+            color: white;
+        }
+        .Incorrect{
+            border: 2px solid red;
+        }
+        .Invisible{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+        <div class="alert Invisible" align="center" is="alertMe">
+            <h4 align="center">{{  alertMsg  }}</h4>
+        </div>
+    <div class="Login-Div">
+        <h5 class="Head" align="Center"> WELCOME TO FILE ENCRYPTION </h5>
+        <form id = "form" class="Login" action="#" method="post" >
+        <p style="color: white; font-variant: 'fangsong';">In this step you have to set a strong password as your Encrypt password. Please do not forget this password</p>   
+            <div class="ask" align="center">
+                <label for="Pass">Password:</label>
+                <input id="Pass" name="Pass" type="password" style="margin-left: 110px;">
+            </div>
+            <div class="ask" align="center">
+                <label for="RPass">Retype Password:</label>
+                <input id="RPass" name="RPass" type="password">
+            </div>
+            
+        </form>
+        <div class="ask" align="center">
+                <button onclick="validate()">Submit</button>
+               
+            </div>
+    </div>
+    <script>
+        function validate() {
+            pass1 = document.getElementById('Pass');
+            pass2 = document.getElementById('RPass');
+            form = document.getElementById('form');
+            alerter = document.getElementById('alertMe');
+            if (pass1.value == pass2.value){
+                form.submit()
+                try{
+                    pass1.classList.remove("Incorrect")
+                    pass2.classList.remove("Incorrect")
+                }
+                finally{
+                    console.log("")
+                }
+            }
+            else{
+                pass1.classList.add("Incorrect")
+                pass2.classList.add("Incorrect")
+                alerter.classList.remove("Invisible")
+            }
+        }
+    </script>
+</body>
+</html>
